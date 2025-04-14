@@ -1,0 +1,5 @@
+services:  
+  web:  # This is the name of the service
+    image: advanced-calculator  # Uses the Docker image named 'advanced-calculator'
+    ports:  
+      - "4000:4000"  # Maps port 4000 on the host to port 4000 on the container
