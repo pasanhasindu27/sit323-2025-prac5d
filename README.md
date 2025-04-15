@@ -15,16 +15,16 @@ https://github.com/my-username/sit323-2025-prac5d
 
 ### 2. Docker Image Tagging
 
-docker tag calculator:latest us-central1-docker.pkg.dev/sit323-25t1-yuwei-zhu-10a9433/calculator-repo/calculator:latest
+docker tag calculator:latest us-central1-docker.pkg.dev/sit323/calculator-repo/calculator:latest
 3. Docker Authentication
 
 gcloud auth print-access-token | docker login -u oauth2accesstoken --password-stdin us-central1-docker.pkg.dev
 4. Image Deployment
 
-docker push us-central1-docker.pkg.dev/sit323-25t1-yuwei-zhu-10a9433/calculator-repo/calculator:latest
+docker push us-central1-docker.pkg.dev/sit323/calculator-repo/calculator:latest
 5. Verification
 
-docker run -d -p 4000:4000 us-central1-docker.pkg.dev/sit323-25t1-yuwei-zhu-10a9433/calculator-repo/calculator:latest
+docker run -d -p 4000:4000 us-central1-docker.pkg.dev/sit323/calculator-repo/calculator:latest
 -d: Runs container in background
 
 -p 4000:4000: Maps container port to local port
@@ -38,7 +38,7 @@ git push origin main
 To run the container:
 
 
-docker run -d -p 4000:4000 us-central1-docker.pkg.dev/sit323-25t1-yuwei-zhu-10a9433/calculator-repo/calculator:latest
+docker run -d -p 4000:4000 us-central1-docker.pkg.dev/sit323/calculator-repo/calculator:latest
 Access the microservice:
 http://localhost:4000
 
